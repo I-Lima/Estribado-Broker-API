@@ -77,7 +77,6 @@
 	</dependencies>
 
 	<build>
-		<testSourceDirectory>${project.basedir}/src/test/java/com/mandacarubroker/unitTest</testSourceDirectory>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
