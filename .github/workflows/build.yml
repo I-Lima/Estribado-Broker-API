@@ -11,7 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start PostgreSQL container
-        run: cd database-docker && docker-composer up
+        run: docker run --name postgres-db -p 5432:5432 -d postgres:latest
+
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
