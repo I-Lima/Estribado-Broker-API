@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Start PostgreSQL container
-        run: ls
+        run: docker-composer up
 
   build:
     name: Build and analyze
