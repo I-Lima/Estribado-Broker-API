@@ -6,6 +6,12 @@ on:
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
+  setup:
+    name: Setup environment
+    runs-on: ubuntu-latest
+    steps:
+      - name: Start PostgreSQL container
+        run: cd database-docker && docker-composer up
   build:
     name: Build and analyze
     runs-on: ubuntu-latest
