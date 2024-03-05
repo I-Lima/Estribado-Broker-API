@@ -46,21 +46,15 @@ The project was developed in collaboration by the following developers:
   <a href="https://github.com/I-Lima">
     <img src="https://avatars.githubusercontent.com/u/83174653?s=400&u=515b4de4d50855ea8a8dea0d554e3ed0d87bca9d&v=4"  width="80px"/>
   </a>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/uezili">
     <img src="https://avatars.githubusercontent.com/u/40150125?s=48&v=4"  width="80px"/>
   </a>
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/jaopaulomilitao">
     <img src="https://avatars.githubusercontent.com/u/143536750?v=4"  width="80px"/>
-  </a>  
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
   <a href="https://github.com/moisesocosta">
     <img src="https://avatars.githubusercontent.com/u/60359281?v=4"  width="80px"/>
   </a>
@@ -146,6 +140,9 @@ The following collection includes all configured routes, along with their corres
 [Download link](https://drive.google.com/file/d/1G9hVXLiOBNB_Zi5lONOyz7CmCpJ7u6J_/view?usp=sharing)
 
 ## Swagger
+Swagger is an open-source tool that enables clear and interactive documentation of APIs.
+This interface simplifies understanding and integration with the Mandacaru Broker API.
+
 `http://localhost:8080/swagger-ui/index.html#/`
 
 ## Testing
