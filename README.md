@@ -146,7 +146,7 @@ DELETE /stocks/{id}
 
 ### Login no sistema
 
-Efetua o login no sistema
+Efetua o login no sistema.
 
 **Endpoint:**
 
@@ -164,7 +164,7 @@ POST /auth/login
 
 ### Registro no sistema
 
-Efetua o registro no sistema
+Efetua o registro no sistema.
 
 **Endpoint:**
 
@@ -181,7 +181,7 @@ POST /auth/register
 
 ### Excluir registro no sistema
 
-Exclui o registro no sistema
+Exclui o registro no sistema.
 
 **Endpoint:**
 
