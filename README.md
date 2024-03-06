@@ -134,6 +134,168 @@ Exclui um registro específico com base no ID.
 DELETE /stocks/{id}
 ```
 
+### Login no sistema
+
+Efetua o login no sistema
+
+**Endpoint:**
+
+```http
+POST /auth/login
+```
+
+**Respostas:**
+
+```http
+200: Login bem-sucedido
+400: Credenciais inválidas
+401: Usuário não registrado
+```
+
+### Registro no sistema
+
+Efetua o registro no sistema
+
+**Endpoint:**
+
+```http
+POST /auth/register
+```
+
+**Respostas:**
+
+```http
+200: Registro bem-sucedido
+409: Usuário já registrado
+```
+
+### Excluir registro no sistema
+
+Exclui o registro no sistema
+
+**Endpoint:**
+
+```http
+DELETE /auth/{id}
+```
+
+**Respostas:**
+
+```http
+200: Exclusão bem-sucedida
+```
+
+### Login do usuário no sistema
+
+Realiza o login de um usuário com base nas informações fornecidas.
+
+**Endpoint:**
+
+```http
+POST /user/login
+```
+
+**Respostas:**
+
+```http
+200: Login bem-sucedido
+400: Usuário não registrado
+401: Credenciais inválidas
+```
+
+### Cadastro de usuário no sistema
+
+Registra um novo usuário com base nas informações fornecidas.
+
+**Endpoint:**
+
+```http
+POST /user/register
+```
+
+**Respostas:**
+
+```http
+200: Cadastro bem-sucedida
+409: Username já está em uso
+```
+
+### Atualizar usuário no sistema
+
+Atualiza as informações de um usuário específico com base no ID fornecido.
+
+**Endpoint:**
+
+```http
+PUT /user/{id}
+```
+
+**Respostas:**
+
+```http
+200: Atualização bem-sucedida
+404: Usuário não encontrado
+```
+
+### Exclusão de usuário no sistema
+
+Exclui um usuário específico com base no ID fornecido.
+
+**Endpoint:**
+
+```http
+DELETE /user/{id}
+```
+
+**Respostas:**
+
+```http
+200: Exclusão bem-sucedida
+404: Usuário não encontrado
+```
+
+### Listar todos os investimentos
+
+Retorna uma lista de todos os tipos de investimentos disponíveis.
+
+**Endpoint:**
+
+```http
+GET /assets
+```
+
+### Registrar um novo investimento
+
+Cria um novo investimento com base nos dados fornecidos.
+
+**Endpoint:**
+
+```http
+POST /assets/register
+```
+
+**Respostas:**
+
+```http
+200: Registro bem-sucedido
+```
+
+### Excluir um investimento
+
+Exclui um investimento específico com base no ID fornecido.
+
+**Endpoint:**
+
+```http
+DELETE /assets/{id}
+```
+
+**Respostas:**
+
+```http
+200: Exclusão bem-sucedida
+```
+
 ## Collection do Postman
 
 A coleção a seguir compreende todas as rotas configuradas, juntamente com seus testes de API correspondentes já implementados.
