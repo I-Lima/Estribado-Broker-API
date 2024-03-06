@@ -153,6 +153,7 @@ Registra um novo Exchange Traded Fund com base nos dados fornecidos.
 POST /etf/register
 ```
 
+
 ### Atualizar um Exchange Traded Fund
 
 Atualiza os detalhes de um Exchange Traded Fund específico com base no ID fornecido.
