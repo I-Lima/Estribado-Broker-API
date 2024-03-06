@@ -10,21 +10,36 @@
     - [What is a home broker?](#what-is-a-home-broker)
   - [Developers](#developers)
   - [Resources](#resources)
+    - [System login](#system-login)
+    - [System registration](#system-registration)
+    - [Delete system registration](#delete-system-registration)
+    - [Get all exchange traded funds](#get-a-specific-exchange-traded-fund)
+    - [Get a specific Exchange Traded Fund](#get-a-specific-exchange-traded-fund)
+    - [Register an Exchange Traded Fund](#register-an-exchange-traded-fund)
+    - [Update an Exchange Traded Fund](#update-an-exchange-traded-fund)
+    - [Delete an Exchange Traded Fund](#delete-an-exchange-traded-fund)
+    - [List all investments](#list-all-investments)
+    - [Register a new investment](#register-a-new-investment)
+    - [Delete an investment](#delete-an-investment)
+    - [List all real estate funds](#list-all-real-estate-funds)
+    - [Get a specific real estate fund](#get-a-specific-exchange-traded-fund)
+    - [Register a new real estate fund](#register-a-new-real-estate-fund)
+    - [Update a specific real estate fund](#update-an-exchange-traded-fund)
+    - [Delete a specific real estate fund](#delete-a-specific-real-estate-fund)
     - [Get all registers](#get-all-registers)
     - [Get register](#get-register)
     - [Create register](#create-register)
     - [Update register](#update-register)
     - [Delete register](#delete-register)
-    - [System login](#system-login)
-    - [System registration](#system-registration)
-    - [Delete system registration](#delete-system-registration)
+    - [List all assets](#list-all-assets)
+    - [Get a specific asset](#get-a-specific-asset)
+    - [Register an asset](#register-an-asset)
+    - [Update an asset](#update-an-asset)
+    - [Delete an asset](#delete-an-asset)
     - [User system login](#user-system-login)
     - [User system registration](#user-system-registration)
     - [Update user in the system](#update-user-in-the-system)
     - [Delete user in the system](#delete-user-in-the-system)
-    - [List all investments](#list-all-investments)
-    - [Register a new investment](#register-a-new-investment)
-    - [Delete an investment](#delete-an-investment)
   - [Postman collection](#postman-collection)
   - [Swagger](#swagger)
   - [Testing](#testing)
@@ -71,6 +86,205 @@ The project was developed in collaboration by the following developers:
 </div>
 
 ## Resources
+
+### System login
+
+Logs into the system.
+
+**Endpoint:**
+
+```http
+POST /auth/login
+```
+
+**Responses:**
+
+```http
+200: Successful login
+400: Invalid credentials
+401: User not registered
+```
+
+### System registration
+
+Registers in the system.
+
+**Endpoint:**
+
+```http
+POST /auth/register
+```
+
+**Responses:**
+
+```http
+200: Successful registration
+409: User already registered
+```
+
+### Delete system registration
+
+Deletes the registration in the system.
+
+**Endpoint:**
+
+```http
+DELETE /auth/{id}
+```
+
+**Responses:**
+
+```http
+200: Successful deletion
+```
+
+### Get all Exchange Traded Funds
+
+Returns all available Exchange Traded Funds.
+
+**Endpoint:**
+
+```http
+GET /etf
+```
+
+### Get a specific Exchange Traded Fund
+
+Returns details of a specific Exchange Traded Fund based on the provided ID.
+
+**Endpoint:**
+
+```http
+GET /etf/{id}
+```
+
+### Register an Exchange Traded Fund
+
+Registers a new Exchange Traded Fund based on the provided data.
+
+**Endpoint:**
+
+```http
+POST /etf/register
+```
+
+### Update an Exchange Traded Fund
+
+Updates details of a specific Exchange Traded Fund based on the provided ID.
+
+**Endpoint:**
+
+```http
+PUT /etf/{id}
+```
+
+### Delete an Exchange Traded Fund
+
+Deletes a specific Exchange Traded Fund based on the provided ID.
+
+**Endpoint:**
+
+```http
+DELETE /etf/{id}
+```
+
+### List all investments
+
+Returns a list of all available types of investments.
+
+**Endpoint:**
+
+```http
+GET /assets
+```
+
+### Register a new investment
+
+Creates a new investment based on the provided data.
+
+**Endpoint:**
+
+```http
+POST /assets/register
+```
+
+**Responses:**
+
+```http
+200: Successful registration
+```
+
+### Delete an investment
+
+Deletes a specific investment based on the provided ID.
+
+**Endpoint:**
+
+```http
+DELETE /assets/{id}
+```
+
+**Responses:**
+
+```http
+200: Successful deletion
+```
+
+### List all real estate funds
+
+Retrieve all registered real estate funds.
+
+**Endpoint:**
+
+```http
+GET /ref
+```
+
+### Get a specific real estate fund
+
+Retrieve details of a specific real estate fund based on ID.
+
+**Endpoint:**
+
+```http
+GET /ref/{id}
+```
+
+### Register a new real estate fund
+
+Register a new real estate fund based on the provided data.
+
+**Endpoint:**
+
+```http
+POST /ref/register
+```
+
+### Update a specific real estate fund
+
+Update details of a specific real estate fund based on ID.
+
+**Endpoint:**
+
+```http
+PUT /ref/{id}
+```
+
+### Delete a specific real estate fund
+
+Delete a specific real estate fund based on ID.
+
+**Endpoint:**
+
+```http
+DELETE /ref/{id}
+```
+
+**Responses:**
+
+```http
+200: Successful deletion
+```
 
 ### Get all registers
 
@@ -144,55 +358,54 @@ No return.
 DELETE /stocks/{id}
 ```
 
-### System login
+### List all assets
 
-Logs into the system.
-
-**Endpoint:**
-
-```http
-POST /auth/login
-```
-
-**Responses:**
-
-```http
-200: Successful login
-400: Invalid credentials
-401: User not registered
-```
-
-### System registration
-
-Registers in the system.
+Get all assets.
 
 **Endpoint:**
 
 ```http
-POST /auth/register
+GET /treasury
 ```
 
-**Responses:**
+### Get a specific asset
 
-```http
-200: Successful registration
-409: User already registered
-```
-
-### Delete system registration
-
-Deletes the registration in the system.
+Get details of a specific asset based on the ID.
 
 **Endpoint:**
 
 ```http
-DELETE /auth/{id}
+GET /treasury/{id}
 ```
 
-**Responses:**
+### Register an asset
+
+Register a new asset based on the provided data.
+
+**Endpoint:**
 
 ```http
-200: Successful deletion
+POST /treasury/register
+```
+
+### Update an asset
+
+Update details of a specific asset based on the ID.
+
+**Endpoint:**
+
+```http
+PUT /treasury
+```
+
+### Delete an asset
+
+Delete a specific asset based on the ID.
+
+**Endpoint:**
+
+```http
+DELETE /treasury/{id}
 ```
 
 ### User system login
@@ -262,48 +475,6 @@ DELETE /user/{id}
 ```http
 200: Successful deletion
 404: User not found
-```
-
-### List all investments
-
-Returns a list of all available types of investments.
-
-**Endpoint:**
-
-```http
-GET /assets
-```
-
-### Register a new investment
-
-Creates a new investment based on the provided data.
-
-**Endpoint:**
-
-```http
-POST /assets/register
-```
-
-**Responses:**
-
-```http
-200: Successful registration
-```
-
-### Delete an investment
-
-Deletes a specific investment based on the provided ID.
-
-**Endpoint:**
-
-```http
-DELETE /assets/{id}
-```
-
-**Responses:**
-
-```http
-200: Successful deletion
 ```
 
 ## Postman Collection
