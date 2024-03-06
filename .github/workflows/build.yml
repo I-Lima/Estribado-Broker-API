@@ -32,4 +32,4 @@ jobs:
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=I-Lima_Mandacaru-Broker-API
 
       - name: Stop PostgreSQL service
-        run: docker-compose -f /database-docker/docker-compose.yml down
+        run: docker-compose down
