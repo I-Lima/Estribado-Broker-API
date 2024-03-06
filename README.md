@@ -10,21 +10,36 @@
     - [O que é um Home Broker ?](#o-que-é-um-home-broker-)
   - [Desenvolvedores](#desenvolvedores)
   - [Recursos](#recursos)
+    - [Login no sistema](#login-no-sistema)
+    - [Registro no sistema](#registro-no-sistema)
+    - [Excluir registro no sistema](#excluir-registro-no-sistema)
+    - [Obter todos os Exchange Traded Funds](#obter-todos-os-exchange-traded-funds)
+    - [Obter um Exchange Traded Fund específico](#obter-um-exchange-traded-fund-específico)
+    - [Registrar um Exchange Traded Fund](#registrar-um-exchange-traded-fund)
+    - [Atualizar um Exchange Traded Fund](#atualizar-um-exchange-traded-fund-específico)
+    - [Excluir um Exchange Traded Fund](#excluir-um-exchange-traded-fund)
+    - [Listar todos os investimentos](#listar-todos-os-investimentos)
+    - [Registrar um novo investimento](#registrar-um-novo-investimento)
+    - [Excluir um investimento](#excluir-um-investimento)
+    - [Listar todos os fundos imobiliários](#listar-todos-os-fundos-imobiliários)
+    - [Obter um fundo imobiliário específico](#obter-um-fundo-imobiliário-específico)
+    - [Registrar um novo fundo imobiliário](#registrar-um-novo-fundo-imobiliário)
+    - [Atualizar um fundo imobiliário específico](#atualizar-um-fundo-imobiliário-específico)
+    - [Excluir um fundo imobiliário específico](#excluir-um-fundo-imobiliário-específico)
     - [Listar todas os registros](#listar-todos-os-registros)
     - [Listar um Registro](#listar-um-registro)
     - [Criar um novo registro](#criar-um-novo-registro)
     - [Atualizar um registro por ID](#atualizar-um-registro)
     - [Excluir um registro](#excluir-um-registro)
-    - [Login no sistema](#login-no-sistema)
-    - [Registro no sistema](#registro-no-sistema)
-    - [Excluir registro no sistema](#excluir-registro-no-sistema)
+    - [Listar todos os ativos](#listar-todos-os-ativos)
+    - [Obter um ativo específico](#obter-um-ativo-específico)
+    - [Registrar um ativo](#registrar-um-ativo)
+    - [Atualizar um ativo](#atualizar-um-ativo)
+    - [Excluir um ativo](#excluir-um-ativo)
     - [Login do usuário no sistema](#login-do-usuário-no-sistema)
     - [Cadastro de usuário no sistema](#cadastro-de-usuário-no-sistema)
     - [Atualizar usuário no sistema](#atualizar-usuário-no-sistema)
     - [Exclusão de usuário no sistema](#exclusão-de-usuário-no-sistema)
-    - [Listar todos os investimentos](#listar-todos-os-investimentos)
-    - [Registrar um novo investimento](#registrar-um-novo-investimento)
-    - [Excluir um investimento](#excluir-um-investimento)
   - [Collection do Postman](#collection-do-postman)
   - [Swagger](#swagger)
   - [Testes](#testes)
@@ -71,6 +86,205 @@ O projeto foi elaborado em colaboração pelos seguintes desenvolvedores:
 </div>
 
 ## Recursos
+
+### Login no sistema
+
+Efetua o login no sistema.
+
+**Endpoint:**
+
+```http
+POST /auth/login
+```
+
+**Respostas:**
+
+```http
+200: Login bem-sucedido
+400: Credenciais inválidas
+401: Usuário não registrado
+```
+
+### Registro no sistema
+
+Efetua o registro no sistema.
+
+**Endpoint:**
+
+```http
+POST /auth/register
+```
+
+**Respostas:**
+
+```http
+200: Registro bem-sucedido
+409: Usuário já registrado
+```
+
+### Excluir registro no sistema
+
+Exclui o registro no sistema.
+
+**Endpoint:**
+
+```http
+DELETE /auth/{id}
+```
+
+**Respostas:**
+
+```http
+200: Exclusão bem-sucedida
+```
+
+### Obter todos os Exchange Traded Funds
+
+Retorna todos os Exchange Traded Funds disponíveis.
+
+**Endpoint:**
+
+```http
+GET /etf
+```
+
+### Obter um Exchange Traded Fund específico
+
+Retorna os detalhes de um Exchange Traded Fund específico com base no ID fornecido.
+
+**Endpoint:**
+
+```http
+GET /etf/{id}
+```
+
+### Registrar um Exchange Traded Fund
+
+Registra um novo Exchange Traded Fund com base nos dados fornecidos.
+
+**Endpoint:**
+
+```http
+POST /etf/register
+```
+
+### Atualizar um Exchange Traded Fund
+
+Atualiza os detalhes de um Exchange Traded Fund específico com base no ID fornecido.
+
+**Endpoint:**
+
+```http
+PUT /etf/{id}
+```
+
+### Excluir um Exchange Traded Fund
+
+Exclui um Exchange Traded Fund específico com base no ID fornecido.
+
+**Endpoint:**
+
+```http
+DELETE /etf/{id}
+```
+
+### Listar todos os investimentos
+
+Retorna uma lista de todos os tipos de investimentos disponíveis.
+
+**Endpoint:**
+
+```http
+GET /assets
+```
+
+### Registrar um novo investimento
+
+Cria um novo investimento com base nos dados fornecidos.
+
+**Endpoint:**
+
+```http
+POST /assets/register
+```
+
+**Respostas:**
+
+```http
+200: Registro bem-sucedido
+```
+
+### Excluir um investimento
+
+Exclui um investimento específico com base no ID fornecido.
+
+**Endpoint:**
+
+```http
+DELETE /assets/{id}
+```
+
+**Respostas:**
+
+```http
+200: Exclusão bem-sucedida
+```
+
+### Listar todos os fundos imobiliários
+
+Obtém todos os fundos imobiliários cadastrados.
+
+**Endpoint:**
+
+```http
+GET /ref
+```
+
+### Obter um fundo imobiliário específico
+
+Obtém os detalhes de um fundo imobiliário específico com base no ID.
+
+**Endpoint:**
+
+```http
+GET /ref/{id}
+```
+
+### Registrar um novo fundo imobiliário
+
+Registra um novo fundo imobiliário com base nos dados fornecidos.
+
+**Endpoint:**
+
+```http
+POST /ref/register
+```
+
+### Atualizar um fundo imobiliário específico
+
+Atualiza os detalhes de um fundo imobiliário específico com base no ID.
+
+**Endpoint:**
+
+```http
+PUT /ref/{id}
+```
+
+### Excluir um fundo imobiliário específico
+
+Exclui um fundo imobiliário específico com base no ID.
+
+**Endpoint:**
+
+```http
+DELETE /ref/{id}
+```
+
+**Respostas:**
+
+```http
+200: Exclusão bem-sucedida
+```
 
 ### Listar todos os registros
 
@@ -144,55 +358,54 @@ Exclui um registro específico com base no ID.
 DELETE /stocks/{id}
 ```
 
-### Login no sistema
+### Listar todos os ativos
 
-Efetua o login no sistema.
-
-**Endpoint:**
-
-```http
-POST /auth/login
-```
-
-**Respostas:**
-
-```http
-200: Login bem-sucedido
-400: Credenciais inválidas
-401: Usuário não registrado
-```
-
-### Registro no sistema
-
-Efetua o registro no sistema.
+Obtém todos os ativos.
 
 **Endpoint:**
 
 ```http
-POST /auth/register
+GET /treasury
 ```
 
-**Respostas:**
+### Obter um ativo específico
 
-```http
-200: Registro bem-sucedido
-409: Usuário já registrado
-```
-
-### Excluir registro no sistema
-
-Exclui o registro no sistema.
+Obtém detalhes de um ativo específico com base no ID.
 
 **Endpoint:**
 
 ```http
-DELETE /auth/{id}
+GET /treasury/{id}
 ```
 
-**Respostas:**
+### Registrar um ativo
+
+Registra um novo ativo com base no dados fornecidos
+
+**Endpoint:**
 
 ```http
-200: Exclusão bem-sucedida
+POST /treasury/register
+```
+
+### Atualizar um ativo
+
+Atualiza os detalhes de um ativo específico com base no ID.
+
+**Endpoint:**
+
+```http
+PUT /treasury
+```
+
+### Excluir um ativo
+
+Exclui um ativo específico com base no ID.
+
+**Endpoint:**
+
+```http
+DELETE /treasury/{id}
 ```
 
 ### Login do usuário no sistema
@@ -262,48 +475,6 @@ DELETE /user/{id}
 ```http
 200: Exclusão bem-sucedida
 404: Usuário não encontrado
-```
-
-### Listar todos os investimentos
-
-Retorna uma lista de todos os tipos de investimentos disponíveis.
-
-**Endpoint:**
-
-```http
-GET /assets
-```
-
-### Registrar um novo investimento
-
-Cria um novo investimento com base nos dados fornecidos.
-
-**Endpoint:**
-
-```http
-POST /assets/register
-```
-
-**Respostas:**
-
-```http
-200: Registro bem-sucedido
-```
-
-### Excluir um investimento
-
-Exclui um investimento específico com base no ID fornecido.
-
-**Endpoint:**
-
-```http
-DELETE /assets/{id}
-```
-
-**Respostas:**
-
-```http
-200: Exclusão bem-sucedida
 ```
 
 ## Collection do Postman
