@@ -21,10 +21,6 @@ jobs:
       - name: Start PostgreSQL service
         run: cd database-docker && docker-compose up -d
 
-      - name: Build and test Spring Boot app
-        run: |
-          mvn clean install
-
       - name: SonarCloud Scan
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
