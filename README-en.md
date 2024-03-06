@@ -15,6 +15,16 @@
     - [Create Register](#create-register)
     - [Update Register](#update-register)
     - [Delete Register](#delete-register)
+    - [System Login](#system-login)
+    - [System Registration](#system-registration)
+    - [Delete System Registration](#delete-system-registration)
+    - [User System Login](#user-system-login)
+    - [User System Registration](#user-system-registration)
+    - [Update User In The System](#update-user-in-the-system)
+    - [Delete User In The System](#delete-user-in-the-system)
+    - [List All Investments](#list-all-investments)
+    - [Register A New Investment](#register-a-new-investment)
+    - [Delete An Investment](#delete-an-investment)
   - [Postman Collection](#postman-collection)
   - [Swagger](#swagger)
   - [Testing](#testing)
@@ -92,7 +102,7 @@ Returns the object with the sent data.
 POST /stocks
 ```
 
-**Corpo da Solicitação (Request Body):**
+**Request Body:**
 
 ```JSON
 {
@@ -113,7 +123,7 @@ Returns the object with the sent data
 PUT /stocks/{id}
 ```
 
-**Corpo da Solicitação (Request Body):**
+**Request Body:**
 
 ```JSON
 {
@@ -132,6 +142,168 @@ No return.
 
 ```http
 DELETE /stocks/{id}
+```
+
+### System login
+
+Logs into the system.
+
+**Endpoint:**
+
+```http
+POST /auth/login
+```
+
+**Responses:**
+
+```http
+200: Successful login
+400: Invalid credentials
+401: User not registered
+```
+
+### System registration
+
+Registers in the system.
+
+**Endpoint:**
+
+```http
+POST /auth/register
+```
+
+**Responses:**
+
+```http
+200: Successful registration
+409: User already registered
+```
+
+### Delete system registration
+
+Deletes the registration in the system.
+
+**Endpoint:**
+
+```http
+DELETE /auth/{id}
+```
+
+**Responses:**
+
+```http
+200: Successful deletion
+```
+
+### User system login
+
+Logs in a user based on the provided information.
+
+**Endpoint:**
+
+```http
+POST /user/login
+```
+
+**Responses:**
+
+```http
+200: Successful login
+400: User not registered
+401: Invalid credentials
+```
+
+### User System Registration
+
+Registers a new user based on the provided information.
+
+**Endpoint:**
+
+```http
+POST /user/register
+```
+
+**Responses:**
+
+```http
+200: Successful registration
+409: Username already in use
+```
+
+### Update user in the system
+
+Updates the information of a specific user based on the provided ID.
+
+**Endpoint:**
+
+```http
+PUT /user/{id}
+```
+
+**Responses:**
+
+```http
+200: Successful update
+404: User not found
+```
+
+### Delete user in the system
+
+Deletes a specific user based on the provided ID.
+
+**Endpoint:**
+
+```http
+DELETE /user/{id}
+```
+
+**Responses:**
+
+```http
+200: Successful deletion
+404: User not found
+```
+
+### List all investments
+
+Returns a list of all available types of investments.
+
+**Endpoint:**
+
+```http
+GET /assets
+```
+
+### Register a new investment
+
+Creates a new investment based on the provided data.
+
+**Endpoint:**
+
+```http
+POST /assets/register
+```
+
+**Responses:**
+
+```http
+200: Successful registration
+```
+
+### Delete an investment
+
+Deletes a specific investment based on the provided ID.
+
+**Endpoint:**
+
+```http
+DELETE /assets/{id}
+```
+
+**Responses:**
+
+```http
+200: Successful deletion
 ```
 
 ## Postman Collection
