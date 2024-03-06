@@ -29,7 +29,7 @@ jobs:
           distribution: 'zulu'
 
       - name: Start PostgreSQL service
-        run: docker-compose -f database-docker/docker-compose.yml up -d
+        run: docker-compose -f ../../database-docker/docker-compose.yml up -d
 
       - name: Build and test Spring Boot app
         run: |
@@ -42,4 +42,4 @@ jobs:
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar -Dsonar.projectKey=I-Lima_Mandacaru-Broker-API
 
       - name: Stop PostgreSQL service
-        run: docker-compose -f database-docker/docker-compose.yml down
+        run: docker-compose -f ../../database-docker/docker-compose.yml down
