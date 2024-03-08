@@ -2,7 +2,7 @@
 
 ###### Don't speak portuguese? <a href="https://github.com/I-Lima/Mandacaru-Broker-API/blob/main/README-en.md">Click here</a> to view this page in English
 
-<img src="./public/logo-estribado.jpg" width=" 100%" />
+<center><img src="./public/logo-estribado.jpg" width="80%" /></center>
 
 <p align="center"><i>Transformando investidores estribados em mestres do mercado financeiro</i></p>
 
