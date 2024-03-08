@@ -471,7 +471,7 @@ DELETE /user/{id}
 
 A coleção a seguir compreende todas as rotas configuradas, juntamente com seus testes de API correspondentes já implementados.
 
-[Link para download](https://drive.google.com/file/d/1G9hVXLiOBNB_Zi5lONOyz7CmCpJ7u6J_/view?usp=sharing)
+[Link para download](https://github.com/I-Lima/Mandacaru-Broker-API/blob/main/public/Mandacaru%20-%20Homebroker.postman_collection.json)
 
 ## Swagger
 O Swagger é uma ferramenta de código aberto que permite documentar APIs de forma clara e interativa.
