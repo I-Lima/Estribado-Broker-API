@@ -1,6 +1,11 @@
-# Mandacaru Broker API
+
+# Estribado Broker
 
 ###### Não fala inglês? <a href="https://github.com/I-Lima/Mandacaru-Broker-API/blob/main/README.md">Clique aqui</a> para ver está página em português
+
+<center><img src="./public/logo-estribado.jpg" width="80%" /></center>
+
+<p align="center"><i>Turning starry-eyed investors into masters of the financial market</i></p>
 
 ## Table of Contents
 
