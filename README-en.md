@@ -1,3 +1,4 @@
+
 # Estribado Broker
 
 ###### Não fala inglês? <a href="https://github.com/I-Lima/Mandacaru-Broker-API/blob/main/README.md">Clique aqui</a> para ver está página em português
@@ -469,7 +470,8 @@ DELETE /user/{id}
 ## Postman Collection
 
 The following collection includes all configured routes, along with their corresponding API tests already implemented.
-[Download link](https://drive.google.com/file/d/1G9hVXLiOBNB_Zi5lONOyz7CmCpJ7u6J_/view?usp=sharing)
+
+[Download link](https://github.com/I-Lima/Mandacaru-Broker-API/blob/main/public/Mandacaru%20-%20Homebroker.postman_collection.json)
 
 ## Swagger
 Swagger is an open-source tool that enables clear and interactive documentation of APIs.
