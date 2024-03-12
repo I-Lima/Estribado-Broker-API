@@ -5,6 +5,9 @@ import com.mandacarubroker.domain.typesinvestiments.RegisterTypeInvestment;
 import com.mandacarubroker.domain.typesinvestiments.ResponseDataTransferObject;
 import com.mandacarubroker.domain.typesinvestiments.TypesInvestments;
 import com.mandacarubroker.service.TypesInvestmentsService;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
+import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import jakarta.validation.Valid;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
@@ -27,7 +30,10 @@ public class InvestmentsController {
   ) {
     this.investmentsService = typesInvestmentsService;
   }
-
+  @Operation(summary = "Get all Investments", method = "POST")
+  @ApiResponses(value = {
+          @ApiResponse(responseCode = "200", description = "success"),
+  })
   @GetMapping
   public ResponseEntity<GetResponseDataTransferObject> getAll() {
     List<TypesInvestments> response = investmentsService.getAllInvestments();
@@ -39,7 +45,10 @@ public class InvestmentsController {
             response
         ));
   }
-
+  @Operation(summary = "Register a investment", method = "POST")
+  @ApiResponses(value = {
+          @ApiResponse(responseCode = "200", description = "success"),
+  })
   @PostMapping("/register")
   public ResponseEntity<ResponseDataTransferObject> create(
       @RequestBody @Valid RegisterTypeInvestment data
@@ -50,11 +59,14 @@ public class InvestmentsController {
         .ok()
         .body(new ResponseDataTransferObject(
           true,
-          "successfully registered",
+          null,
           response
         ));
   }
-
+  @Operation(summary = "Delete a specific investment", method = "POST")
+  @ApiResponses(value = {
+          @ApiResponse(responseCode = "200", description = "success"),
+  })
   @DeleteMapping("/{id}")
   public ResponseEntity<ResponseDataTransferObject> delete(@PathVariable String id) {
     investmentsService.delete(id);
@@ -63,7 +75,7 @@ public class InvestmentsController {
         .ok()
         .body(new ResponseDataTransferObject(
             true,
-            "successfully deleted",
+            null,
             null
         ));
   }
