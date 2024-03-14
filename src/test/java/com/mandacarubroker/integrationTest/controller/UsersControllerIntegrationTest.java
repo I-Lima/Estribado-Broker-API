@@ -1,6 +1,5 @@
 package com.mandacarubroker.integrationTest.controller;
 
-import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.mandacarubroker.domain.users.LoginDataTransferObject;
 import com.mandacarubroker.domain.users.LoginResponseDataTransferObject;
@@ -22,9 +21,6 @@ import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 import java.sql.Timestamp;
-import java.util.List;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @AutoConfigureMockMvc

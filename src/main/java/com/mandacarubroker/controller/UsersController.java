@@ -21,6 +21,7 @@ import org.springframework.web.bind.annotation.*;
 public class UsersController {
   private final UsersRepository usersRepository;
   private final UsersService usersService;
+  private static final String INTERNAL_SERVER_ERROR_MESSAGE = "There was an error";
 
   @SuppressWarnings("checkstyle:MissingJavadocType")
   public UsersController(
@@ -46,7 +47,7 @@ public class UsersController {
           .badRequest()
           .body(new ResponseDataTransferObject(
               false,
-              "Unregistered user.",
+              INTERNAL_SERVER_ERROR_MESSAGE,
               null
           ));
     }
@@ -90,7 +91,7 @@ public class UsersController {
           .badRequest()
           .body(new ResponseDataTransferObject(
               false,
-              "There was an error",
+              INTERNAL_SERVER_ERROR_MESSAGE,
               null
           ));
     }
@@ -111,7 +112,7 @@ public class UsersController {
           .status(500)
           .body(new ResponseDataTransferObject(
               false,
-              "There was an error",
+              INTERNAL_SERVER_ERROR_MESSAGE,
               null
           ));
     }
@@ -137,7 +138,7 @@ public class UsersController {
           .badRequest()
           .body(new ResponseDataTransferObject(
               false,
-              "There was an error",
+              INTERNAL_SERVER_ERROR_MESSAGE,
               null
           ));
     }
@@ -158,7 +159,7 @@ public class UsersController {
           .status(500)
           .body(new ResponseDataTransferObject(
               false,
-              "There was an error",
+              INTERNAL_SERVER_ERROR_MESSAGE,
               null
           ));
     }
