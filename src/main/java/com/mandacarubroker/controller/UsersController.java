@@ -47,7 +47,7 @@ public class UsersController {
           .badRequest()
           .body(new ResponseDataTransferObject(
               false,
-              INTERNAL_SERVER_ERROR_MESSAGE,
+              "Unregistered user.",
               null
           ));
     }
