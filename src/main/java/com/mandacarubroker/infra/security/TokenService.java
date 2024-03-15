@@ -11,8 +11,6 @@ import java.time.ZoneOffset;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
-import javax.management.RuntimeErrorException;
-
 /**
  * The generate token class.
  **/

@@ -3,7 +3,6 @@ package com.mandacarubroker.unitTest.controller;
 import com.mandacarubroker.controller.StockController;
 import com.mandacarubroker.domain.stock.RequestStockDataTransferObject;
 import com.mandacarubroker.domain.stock.Stock;
-import com.mandacarubroker.repository.StockRepository;
 import com.mandacarubroker.service.StockService;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
